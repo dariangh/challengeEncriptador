@@ -19,18 +19,10 @@ function diccionarios(){
 //limpiar caja
 function limpiarEncriptarCaja() {
     document.querySelector(".entrada-texto").value="";
-    let imgLimpiar = document.querySelector(".mensajes-salida").classList.add('oculto');
+    document.querySelector(".mensajes-salida").classList.add('oculto');
     document.querySelector(".mensajes-salida").classList.remove('ver');
-    // imgLimpiar.remove();
     document.querySelector('.boton-copiar').classList.remove('oculto');
 
-
-    // let salidaTexto = document.querySelector(".salida-texto");
-    // entradaTexto.value = "";
-    // salidaTexto.value = "";
-
-    // let imgLimpiar=document.querySelector('.mensajes-salida');
-    // imgLimpiar.remove();
 }
 function limpiarDesencriptarCaja(){
     document.querySelector('.salida-texto').innerHTML="";
@@ -102,22 +94,14 @@ let btnCopy = document
         let textCopy = document.querySelector(".salida-texto").innerHTML;
         copy(textCopy);
         agregarClases();
-        
-        // document.querySelector('.boton-copiar').classList.add('oculto');
-
-        
-
-
     });
 
 async function copy(text) {
     try {
         await navigator.clipboard.writeText(text);
         console.log(text);
-        /* Resolved - text copied to clipboard successfully */
     } catch (err) {
         console.error("Failed to copy: ", err);
-        /* Rejected - text failed to copy to the clipboard */
     }
 }
 
@@ -140,6 +124,6 @@ function validar(texto){
     return true; // El texto ha pasado todas las validaciones
 }
 const msgValidacion = msg => {
-    return /^[a-z]+$/.test(msg); // Permitir letras minúsculas con acentos
+    return /^[a-z]+$/.test(msg); // Permitir letras minúsculas sin acentos
 }
 
