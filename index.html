@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">    
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header class="header">
+        
+            <img  src="img/Logo-1.png" alt="logo-alura">
+        
+    </header>
+    <main>
+    <div class="contenedor">
+        <div class="msg-error">
+            <p class="msg-error__p msg-validar oculto"></p>
+        </div>
+        <div class="cajas-texto">
+            
+            <div class="cajas-texto__entrada">
+                    <textarea class="cajas-texto__textArea entrada-texto" placeholder="Ingrese texto aqui"></textarea>
+                <div class="msg-advertencia">  
+                        <p class="advertencia no-margin no-padding"><img class="imagen-exclamacion no-margin no-padding" src="img/bi_exclamation-circle-fill-1.png">Solo letras minusculas sin acentos</p>
+                </div>
+                <div class="caja-botones">
+                    <input type="button" class="boton encriptar" value="Encriptar">
+                    <input type="button" class="boton desencriptar" value="Desencriptar">
+                </div>
+            </div>
+                
+
+                <div class="cajas-texto__salida">
+                    
+                    <p class="salida-texto"></p>
+                    <div class="cajas-texto__textArea mensajes-salida">
+                        
+
+                        <img class="imagen-sinMsg no-margin no-padding img-salida" src="img/Muñeco.png" alt="muñeco">
+                        <h4 class="centrar-texto no-margin no-padding">Ningún mensaje fue encontado</h4>
+                        <p class="texto-grey centrar-texto no-padding">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        
+
+                    </div>
+                    <input type="button" class="boton boton-copiar oculto" value="Copiar">
+                </div>
+                
+            </div>
+            
+
+        </div>
+    </div>
+
+    </main>
+    <footer>
+        <div class="footer">
+        <p>By Darian GH  <a href="https://github.com/dariangh">Github</a></p>
+    </div>
+    </footer>
+    <script src="./js/encriptador.js"></script>
+</body>
+</html>
